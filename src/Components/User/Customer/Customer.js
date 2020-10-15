@@ -32,6 +32,7 @@ const Customer = ({userServiceKey}) => {
     }
     const handleSubmit = (evt)=>{
         evt.preventDefault();
+        console.log(evt.target.file.files[0])
         const formData = new FormData();
         formData.append('customerEmail', loggedInUser.email);
         formData.append('action', 'Pending')
@@ -44,7 +45,8 @@ const Customer = ({userServiceKey}) => {
         formData.append('projectDetails', evt.target.projectDetail.value)
         formData.append('file', evt.target.file.files[0])
 
-        fetch('https://creative-agency-mmhk30313.herokuapp.com/addClientProject', {
+        // fetch('https://creative-agency-mmhk30313.herokuapp.com/addClientProject', {
+        fetch('http://localhost:5000/addClientProject', {
             method: 'POST',
             body: formData
         })
