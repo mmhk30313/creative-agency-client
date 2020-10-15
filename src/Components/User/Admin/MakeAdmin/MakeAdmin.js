@@ -22,7 +22,6 @@ const MakeAdmin = () => {
         <div>
             <div className="card w-75 border-info p-3">
                    <h4 className='font-weight-normal my-3'>Email</h4>
-                   <small className='text-secondary text-font-italic'>Helping Purpose: abc@gmail.com</small>
                    <form onSubmit={handleSubmit} className='w-100 mb-5'>
                        <div className="form-group w-100 form-inline justify-content-start">
                             <input type="text" className='form-control w-50 mr-3' name='email' placeholder="Enter Your Email" required/>

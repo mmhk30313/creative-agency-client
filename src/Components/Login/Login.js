@@ -78,6 +78,7 @@ const Login = () => {
                admin 
                ? <div className="m-4 card w-50 p-4 mx-auto border-info">
                    <h5 className='font-weight-light my-3'>Sign in with email as an Admin</h5>
+                   <p className='text-secondary text-font-italic'><small>Helping Purpose: abc@gmail.com</small></p>
                    <form onSubmit={handleSubmit} className=''>
                        <div className="form-group w-100 form-inline justify-content-center">
                             <input ref={nameRef} type="text" className='form-control w-50 mr-3' name='email' placeholder="Enter Your Email" required/>
