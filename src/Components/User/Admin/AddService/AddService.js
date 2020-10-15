@@ -12,8 +12,8 @@ const AddService = () => {
         formData.append('title', evt.target.title.value)
         formData.append('description', evt.target.description.value)
         formData.append('file', evt.target.file.files[0])
-        // fetch('https://creative-agency-mmhk30313.herokuapp.com/addServices', {
-        fetch('http://localhost:5000/addServices', {
+        // fetch('http://localhost:5000/addServices', {
+        fetch('https://creative-agency-mmhk30313.herokuapp.com/addServices', {
             method: 'POST',
             body: formData
         })
