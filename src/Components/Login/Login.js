@@ -48,8 +48,7 @@ const Login = () => {
         evt.preventDefault();
         // console.log(evt.target.email.value);
         const email = evt.target.email.value;
-
-        //fetch(email) diye (admin) check kore (user component) theke admin panel e niye jete hobe...history use kore (right state) e niye jete hobe...
+        // fetch(`http://localhost:5000/admins?email=${email}`)
         fetch(`https://creative-agency-mmhk30313.herokuapp.com/admins?email=${email}`)
         .then(res => res.json())
         .then(data => {

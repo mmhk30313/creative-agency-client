@@ -12,14 +12,15 @@ const AddService = () => {
         formData.append('title', evt.target.title.value)
         formData.append('description', evt.target.description.value)
         formData.append('file', evt.target.file.files[0])
-        fetch('https://creative-agency-mmhk30313.herokuapp.com/addServices', {
+        // fetch('https://creative-agency-mmhk30313.herokuapp.com/addServices', {
+        fetch('http://localhost:5000/addServices', {
             method: 'POST',
             body: formData
         })
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            alert('Welcome Your Project Is Uploaded Successfully!!!');
+            alert('Welcome!!! Your Project Is Uploaded Successfully');
         })
         .catch(error => {
             console.error(error,loggedInUser,setLoggedInUser)
