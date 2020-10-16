@@ -92,8 +92,8 @@ const Customer = ({userServiceKey}) => {
                         <div className="col-md-6 text-md-right text-sm-center text-xs-center">
                             {
                                 loggedInUser.email 
-                                ? <h4 className='style-text'>{loggedInUser.name}</h4>
-                                : <h4 className='style-text'>{user.title}</h4>
+                                ? <h4 className='text-success'>{loggedInUser.name}</h4>
+                                : <h4 className='text-danger'>{user.title}</h4>
                             }
                         </div>
                     </div>

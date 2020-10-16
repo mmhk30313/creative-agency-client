@@ -4,7 +4,7 @@ import uploadIcon from '../../../../images/icons/cloud-upload-outline 1.png';
 const OrderForm = ({handleSubmit,userServiceKey}) => {
     const [currentService, setCurrentService] = useState({});
     useEffect(()=>{
-        userServiceKey !== "hire_us_for_your_service" && fetch(`https://creativemmhkagency30313.herokuapp.com/services/${userServiceKey}`)
+        userServiceKey !== "customer" && userServiceKey !== "hire_us_for_your_service" && fetch(`https://creativemmhkagency30313.herokuapp.com/services/${userServiceKey}`)
         .then(res => res.json())
         .then(data => {
             // console.log(userServiceKey);

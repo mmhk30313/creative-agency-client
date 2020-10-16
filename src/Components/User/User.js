@@ -19,7 +19,7 @@ const User = () => {
             {
                 user.title === "Admin"
                 ? <Admin setLoggedInUser={setLoggedInUser} setUser={setUser}></Admin>
-                : <Customer userServiceKey={userServiceKey.userServiceKey}></Customer>
+                : <Customer userServiceKey={userServiceKey.userServiceKey} loggedInUser={loggedInUser}></Customer>
             }
             {/* <Admin loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} ></Admin> */}
         </div>
