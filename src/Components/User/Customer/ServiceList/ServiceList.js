@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ShowList from './ShowList';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const ServiceList = ({checkedEmail}) => {
     // const [loggedInUser]=useContext(UserContext);
@@ -20,6 +21,12 @@ const ServiceList = ({checkedEmail}) => {
         <div className="text-center">
             {/* <h2>Service List: {userServices.length}</h2> */}
             <div className="row justify-content-center">
+                {
+                    !userServices.length && <div className='text-center'>
+                            <CircularProgress color="secondary" /> 
+                            <h2 style={{color: '#DC004E', }}>loading....</h2>
+                        </div>
+                }
                 {
                     userServices.map(service => <ShowList key={service._id} service={service} />)
                 }

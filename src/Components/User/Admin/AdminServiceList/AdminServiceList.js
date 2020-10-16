@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import fakeService from '../../../../FakeService/fakeService';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './AdminServiceList.css';
 
 const AdminServiceList = () => {
@@ -47,19 +48,25 @@ const AdminServiceList = () => {
     }
     return (
         <div className='bg-white rounded p-2 table-form'>
-             <table className="table table-borderless">
-            <thead className='bg-light'>
-                <tr>
-                <th className="text-secondary" scope="col">Name</th>
-                <th className="text-secondary" scope="col">Email Id</th>
-                <th className="text-secondary" scope="col">Service</th>
-                <th className="text-secondary" scope="col">Project Details</th>
-                <th className="text-secondary" scope="col">Status</th>
-                </tr>
-            </thead>
-            <tbody>
+            {
+                !clientServices.length ? <div className='text-center my-5'>
+                            <CircularProgress color="secondary" />
+                            <h2 style={{color: '#DC004E', }}>loading....</h2>
+                        </div>
+            
+            : <table className="table table-borderless">
+                <thead className='bg-light'>
+                    <tr>
+                        <th className="text-secondary" scope="col">Name</th>
+                        <th className="text-secondary" scope="col">Email Id</th>
+                        <th className="text-secondary" scope="col">Service</th>
+                        <th className="text-secondary" scope="col">Project Details</th>
+                        <th className="text-secondary" scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
                 {
-                  clientServices.length > 0 && clientServices.map((clientService) => <tr key={clientService._id}>
+                  clientServices.map((clientService) => <tr key={clientService._id}>
                         <td>{clientService.name}</td>
                         <td>{clientService.email}</td>
                         <td>{clientService.projectTitle}</td>
@@ -80,7 +87,8 @@ const AdminServiceList = () => {
                 }
             </tbody>
         </table>
-        </div>
+        }
+    </div>
     );
 };
 

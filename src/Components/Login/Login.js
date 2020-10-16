@@ -48,8 +48,7 @@ const Login = () => {
         evt.preventDefault();
         // console.log(evt.target.email.value);
         const email = evt.target.email.value;
-        fetch(`http://localhost:5000/admins?email=${email}`)
-        // fetch(`https://creativemmhkagency30313.herokuapp.com/admins?email=${email}`)
+        fetch(`https://creativemmhkagency30313.herokuapp.com/admins?email=${email}`)
         .then(res => res.json())
         .then(data => {
             console.log(data.length > 0);
