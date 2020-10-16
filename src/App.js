@@ -30,10 +30,6 @@ function App() {
             <Home/>
           </Route>
 
-          <Route path='/user'>
-            <Home/>
-          </Route>
-
           <Route path='/login'>
             <Login/> 
           </Route>

@@ -2,10 +2,10 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './ProjectForm.css';
 const ProjectForm = () => {
-    const history = useHistory('/')
+    const history = useHistory();
     const handleSubmit = (evt) =>{
         if(window.confirm("Would you like to connect with our agency???")){
-            history.replace('/user');
+            history.replace('/');
         }else{
             evt.preventDefault();
         }

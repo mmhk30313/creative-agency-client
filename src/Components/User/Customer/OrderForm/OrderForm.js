@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import uploadIcon from '../../../../images/icons/cloud-upload-outline 1.png';
 const OrderForm = ({handleSubmit,userServiceKey}) => {
     const [currentService, setCurrentService] = useState({});
-    const fetchBusinesses = useCallback(() =>{
+    useEffect(()=>{
         userServiceKey !== "customer" && userServiceKey !== "hire_us_for_your_service" && fetch(`https://creativemmhkagency30313.herokuapp.com/services/${userServiceKey}`)
         .then(res => res.json())
         .then(data => {
@@ -13,21 +13,7 @@ const OrderForm = ({handleSubmit,userServiceKey}) => {
         })
         .catch(err => console.log(err))
     },[userServiceKey])
-    useEffect(()=>{
-        fetchBusinesses();
-    },[fetchBusinesses])
-    // const [info, setInfo] = useState({});
-    // const [file, setFile] = useState(null);
-    // const handleBlur = (evt) => {
-    //     const newInfo = {...info};
-    //     newInfo[evt.target.name] = evt.target.value;
-    //     setInfo(newInfo);
-    // }
-    // const handleFileChange = (evt) => {
-    //     const newFile = evt.target.files[0];
-    //     console.log(newFile);
-    //     setFile(newFile);
-    // }
+    
     return (
         <form onSubmit={handleSubmit} className='w-50'>
             <div className="form-group">
