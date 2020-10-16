@@ -9,7 +9,7 @@ const ServiceList = ({checkedEmail}) => {
     const [userServices, setUserServices] = useState([]);
     useEffect(() =>{
         // console.log(checkedEmail);
-        fetch(`https://creative-agency-mmhk30313.herokuapp.com/clients/email?checkedEmail=${checkedEmail}`)
+        fetch(`https://creativemmhkagency30313.herokuapp.com/clients/email?checkedEmail=${checkedEmail}`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

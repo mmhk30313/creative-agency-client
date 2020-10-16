@@ -27,7 +27,7 @@ import ServiceDetails from './ServiceDetails';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(()=>{
-        fetch(`https://creative-agency-mmhk30313.herokuapp.com/services`)
+        fetch(`https://creativemmhkagency30313.herokuapp.com/services`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

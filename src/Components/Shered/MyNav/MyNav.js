@@ -34,7 +34,7 @@ const MyNav = () => {
 
                         : user.title === 'Admin'
 
-                        ? <Link to="/" className='mx-3 nav-link btn btn-outline-info'>Admin</Link>
+                        ? <Link to="/user/admin" className='mx-3 nav-link btn btn-outline-info'>Admin</Link>
 
                         : <Link to="/login" className='mx-3 nav-link btn btn-dark'>Login</Link>
                     }

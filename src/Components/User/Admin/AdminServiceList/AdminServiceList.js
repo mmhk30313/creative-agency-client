@@ -9,7 +9,7 @@ const AdminServiceList = () => {
     const statuses = fakeService;
     const [newStatus, setNewStatus] = useState({});
     useEffect(() =>{
-        fetch(`https://creative-agency-mmhk30313.herokuapp.com/clients`)
+        fetch(`https://creativemmhkagency30313.herokuapp.com/clients`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);
@@ -25,7 +25,7 @@ const AdminServiceList = () => {
         const targetStyle = statuses.find(status => status.name === targetAction); 
         // console.log(targetStyle);
         const id = evt.target.id;
-        fetch(`https://creative-agency-mmhk30313.herokuapp.com/clients/${id}`,{
+        fetch(`https://creativemmhkagency30313.herokuapp.com/clients/${id}`,{
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({action: targetStyle.name,actionColor: targetStyle.style.color, actionBG: targetStyle.style.background})

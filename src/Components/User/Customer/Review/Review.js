@@ -13,17 +13,16 @@ const Review = () => {
             company_designation: evt.target.company_designation.value,
             description: evt.target.description.value
         }
-        console.log(loggedInUser);
+        // console.log(loggedInUser);
         //Comment add hoye jabe...loggedIn User er
-
-        fetch(`https://creative-agency-mmhk30313.herokuapp.com/clientComments`, {
+        fetch(`https://creativemmhkagency30313.herokuapp.com/clientComments`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(clientComment)
         })
         .then(res => {
             if(res){
-                console.log(res);
+                // console.log(res);
                 alert("Your comment is successfully done!!!");
             }
         })

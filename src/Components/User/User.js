@@ -20,7 +20,7 @@ const User = () => {
                 <img src={logo} className='m-2' style={{height: '50px'}} alt=""/>
             </Link>
             {
-                user.title ==="Admin"
+                user.title === "Admin"
                 ? <Admin loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} user={user} ></Admin>
                 : <Customer userServiceKey={userServiceKey.userServiceKey}></Customer>
             }

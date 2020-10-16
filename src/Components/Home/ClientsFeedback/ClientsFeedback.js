@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 const ClientsFeedback = () => {
     const [clients, setClients] = useState([]);
     useEffect(() =>{
-        // fetch(`http://localhost:5000/clientComments`)
-        fetch(`https://creative-agency-mmhk30313.herokuapp.com/clientComments`)
+        fetch(`http://localhost:5000/clientComments`)
+        // fetch(`https://creativemmhkagency30313.herokuapp.com/clientComments`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

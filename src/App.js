@@ -34,7 +34,11 @@ function App() {
           </Route>
 
           {/* Private Route Korte Hobe */}
-          <PrivateRoute path='/user/:userServiceKey'>
+          <PrivateRoute path={`/user/:userServiceKey`}>
+            <User/>
+          </PrivateRoute>
+          
+          <PrivateRoute path='/user/admin'>
             <User/>
           </PrivateRoute>
         </Switch>
