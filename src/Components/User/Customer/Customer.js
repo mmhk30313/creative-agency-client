@@ -89,17 +89,13 @@ const Customer = ({userServiceKey}) => {
                                 review && <h4>Review</h4>
                             }
                         </div>
-                        <div className="col-md-6 text-md-right text-sm-center text-xs-center">
-                            {
-                                loggedInUser.email 
-                                ? <h4 className='text-success'>{loggedInUser.name}</h4>
-                                : <h4 className='text-danger'>{user.title}</h4>
-                            }
+                        <div className="col-md-6 text-md-right text-sm-center text-success text-xs-center">
+                            <h4>{loggedInUser.name}</h4>
                         </div>
                     </div>
                     <div className="jumbotron w-100 m-0">
                         {
-                            order && <OrderForm userServiceKey={userServiceKey} handleSubmit={handleSubmit}/>
+                            order && <OrderForm user={user} userServiceKey={userServiceKey} handleSubmit={handleSubmit}/>
                         }
                         {
                             // loggedInUser.email send kore match kore service gulo ber korte hobe...
