@@ -1,11 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './ProjectForm.css';
 const ProjectForm = () => {
+    const history = useHistory('/')
     const handleSubmit = (evt) =>{
-        evt.preventDefault();
-        console.log(evt.target.name.value);
-        console.log(evt.target.email.value);
-        console.log(evt.target.message.value);
+        if(window.confirm("Would you like to connect with our agency???")){
+            history.replace('/user');
+        }else{
+            evt.preventDefault();
+        }
+        // console.log(evt.target.name.value);
+        // console.log(evt.target.email.value);
+        // console.log(evt.target.message.value);
     }
     return (
         <section className='row justify-content-center communication-form px-5 pt-5 pb-2'>
