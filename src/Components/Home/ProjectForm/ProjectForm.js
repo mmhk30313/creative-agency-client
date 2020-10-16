@@ -28,7 +28,7 @@ const ProjectForm = () => {
                 </form>
             </div>
             <footer className='text-center text-muted mt-5'>
-                <p className='mt-4'>copyright Orange labs {(new Date()).getFullYear()}</p>
+                <p className='mt-4'>copyright Orange labs {(new Date()).getFullYear()} @MMHK</p>
             </footer>
         </section>
     );
