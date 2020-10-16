@@ -72,7 +72,7 @@ const AdminServiceList = () => {
                         <td>{clientService.projectTitle}</td>
                         <td>{clientService.projectDetails}</td>
                         <td>
-                            <select onChange={handleChangeStatus} className='btn btn-outline-info' style={{background: clientService.actionBG, color: clientService.actionColor,border: 'none'}} id={clientService._id}name="status">
+                            <div className='btn btn-outline-info' style={{background: clientService.actionBG, color: clientService.actionColor}}><select onChange={handleChangeStatus} style={{background: clientService.actionBG, color: clientService.actionColor,border: 'none',outline: 'none'}}  id={clientService._id}name="status">
                                 <option style={{background: clientService.actionBG, color: clientService.actionColor}} value={clientService.action}>{clientService.action}</option>
 
                                 <option style={{color: '#FF4545',background:'#FFE3E3'}} value="Pending">Pending</option>
@@ -80,7 +80,7 @@ const AdminServiceList = () => {
                                 <option style={{color: '#FFBD3E',background:'#FFEDA9'}} value="On going">On going</option>
 
                                 <option style={{color: '#009444', background: '#C6FFE0'}} value="Done">Done</option>
-                            </select>
+                            </select></div>
                         </td>
                     </tr>
                     )
