@@ -12,6 +12,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import User from './Components/User/User';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import NotFound from './Components/NotFound/NotFound';
 
 export const UserContext = createContext();
 function App() {
@@ -41,6 +42,10 @@ function App() {
           <PrivateRoute path='/user/admin'>
             <User/>
           </PrivateRoute>
+
+          <Route path='*/:name'>
+            <NotFound/>
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>
