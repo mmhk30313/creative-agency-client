@@ -1,9 +1,9 @@
 [Live Link](https://creative-agency-30313.web.app) 
 
 # Creative Agency:
-  •	A simple website can be used for any kind of agency
-  • Any agency can be involved here and helps others by their works
-  • The website has an admin panel. So it can be controlled
+  -	A simple website can be used for any kind of agency
+  - Any agency can be involved here and helps others by their works
+  - The website has an admin panel. So it can be controlled
     by the admin
   
 ### Tools & Technologies: 
