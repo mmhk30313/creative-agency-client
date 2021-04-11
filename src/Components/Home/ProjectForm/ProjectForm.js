@@ -5,7 +5,7 @@ const ProjectForm = () => {
     const history = useHistory();
     const handleSubmit = (evt) =>{
         if(window.confirm("Would you like to connect with our agency???")){
-            history.replace('/');
+            history.push('/home');
         }else{
             evt.preventDefault();
         }
@@ -14,7 +14,7 @@ const ProjectForm = () => {
         // console.log(evt.target.message.value);
     }
     return (
-        <section className='row justify-content-center communication-form px-5 pt-5 pb-2'>
+        <section className='row w-100 mx-auto justify-content-center communication-form px-5 pt-5 pb-2'>
             <div className="col-md-5">
                 <h1>Let us handle your project, professionally.</h1>
                 <h6 className='text-secondary mt-4'>With well written codes, we build amazing apps for all platforms, mobile and web apps in general.</h6>

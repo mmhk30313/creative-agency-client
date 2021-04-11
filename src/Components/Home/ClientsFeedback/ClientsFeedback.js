@@ -17,7 +17,7 @@ const ClientsFeedback = () => {
     return (
         <section className='perfect-bg'>
             <h3 className='my-5 w-50 text-center mx-auto feedback'>Clients <span style={{color: '#7AB259'}}>Feedback</span></h3>
-            <div className="row my-5 justify-content-center">
+            <div className="row w-100 my-5 justify-content-center">
                 {
                     !clients.length && <div className='text-center'>
                             <CircularProgress color="secondary" /> 
