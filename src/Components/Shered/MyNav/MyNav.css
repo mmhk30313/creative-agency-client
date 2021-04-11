@@ -1,9 +1,13 @@
 .nav-link {
     color: black !important;
+    /* width: 100%; */
+    border-radius: 10px;
+    padding: 10px;
 }
-.nav-link:last-child{
+
+.nav-link:hover{
+    background-color: black;
     color: white !important;
-    width: 100px;
 }
 .toggle-bar{
     background-color: rgb(14, 34, 20) !important;

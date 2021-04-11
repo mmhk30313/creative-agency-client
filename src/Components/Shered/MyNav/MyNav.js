@@ -14,7 +14,7 @@ const MyNav = () => {
     }
     return (
         <Navbar className='container-fluid' collapseOnSelect expand="lg" variant="dark">
-            <Navbar.Brand className='ml-5'>
+            <Navbar.Brand className=''>
                 <Link to='/home'>
                     <img src={logo} width="150" height="47" className="d-inline-block align-top" alt="home" />
                 </Link>
@@ -34,9 +34,9 @@ const MyNav = () => {
 
                         : user.title === 'Admin'
 
-                        ? <Link to="/user/admin" className='mx-3 nav-link btn btn-outline-info'>Admin</Link>
+                        ? <Link to="/user/admin" className='mx-auto my-auto nav-link btn btn-outline-info'>Admin</Link>
 
-                        : <Link to="/login" className='mx-3 nav-link btn btn-dark'>Login</Link>
+                        : <Link to="/login" className='mx-auto nav-link'>Login</Link>
                     }
                     
                 </Nav>

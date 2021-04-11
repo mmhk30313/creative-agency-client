@@ -16,9 +16,9 @@ const Services = () => {
         .catch(err => console.log(err))
     },[])
     return (
-        <section className='text-center my-5'>
+        <section className='text-center w-100 my-5'>
             <h2 className='my-5' style={{fontWeight: '600',fontFamily: 'Poppins'}}>Provide awesome <span style={{color: '#7AB259'}}>services</span></h2>
-            <div className="row justify-content-center">
+            <div className="row w-100 mx-auto justify-content-center">
                 {
                     !services.length && <div className='text-center'>
                             <CircularProgress color="secondary" /> 
